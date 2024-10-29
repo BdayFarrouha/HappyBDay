@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wazza</title>
+  <style>
+    body {
+      background-image: url('images/c.jpg'); /* Background image */
+      background-size: cover; /* Cover the entire page */
+      background-position: center; /* Center the background */
+      /*color: white; /* Change text color for visibility */
+      text-align: center; /* Center text */
+      height: 100vh; /* Full viewport height */
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Center content vertically */
+      align-items: center; /* Center content horizontally */
+    }
+    #protected-content { display: none; }
+  </style>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="game-container">
+    <h1>tgued ruhk hay (savi l klmt l mbaad )</h1>
+    <div id="puzzle-container"></div>
+    <button id="check-button">Check Puzzle</button>
+    <p id="message"></p>
+    <button id="next-level-button" style="display: none;">Next Level</button>
+  </div>
+
+  <div id="crossword-container" style="display: none;">
+    <h1>E5er stage haya</h1>
+    <p id="crossword-instructions">Hot l klmet li l9ithom hne bsh ettale3 klmt l serr</p>
+    <div id="crossword-grid"></div>
+   <button id="crossword-check-button">Check Answers</button>
+    <p id="crossword-message"></p>
+  </div>
+
+  <!-- Move this section to the bottom -->
+  <div id="secret-word-container">
+    <input type="text" id="secret-word-input" placeholder="Enter the secret word" style="display: none;" />
+    <button id="secret-word-button" style="display: none;">Submit</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+<!--// Array of puzzle images for each level
+const puzzleImages = [
+    'images/puzzle1.jpg', // Level 1
+    'images/puzzle2.jpg', // Level 2
+    'images/puzzle3.jpg',
+    'images/puzzle4.jpg', // Level 1
+    'images/puzzle5.jpg', // Level 2
+    'images/puzzle6.jpg',
+    'images/puzzle7.jpg', // Level 1
+  
+    // Add more images as needed
+  ];
+// Array of messages for each level
+const levelMessages = [
+  'l win jet farrouha bsh aamalna l 9ahwa? (klma mn 8 7rouf)',
+  'Chnia klina ki ihtafetna b 3id miled farrouha l mwakher ? (klma mn 4 7rouf)',
+  'ahna mshina l mall of ... ? (klma mn x 7rouf)',
+  'chesmo l nahj li fih l 9ahwa hedhi ? (klma mn 9 7rouf)',
+  'farrouha baad l jaw hne knt khayfa tatla3? (klma mn 5 7rouf)',
+  'Win l taswira hedhi ? (klma mn 6 7rouf)',
+  'chemsha l blasa hedhi ? (klma mn 9 7rouf)',
+  // Add more messages as needed
+];-->

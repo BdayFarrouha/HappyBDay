@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secret Page</title>
+  <style>
+    body {
+      background-image: url('images/1.jpg'); /* Background image */
+      background-size: cover; /* Cover the entire page */
+      background-position: center; /* Center the background */
+      color: white; /* Change text color for visibility */
+      text-align: center; /* Center text */
+      height: 100vh; /* Full viewport height */
+      display: flex;
+      flex-direction: column;
+      justify-content: center; /* Center content vertically */
+      align-items: center; /* Center content horizontally */
+    }
+    #protected-content { display: none; }
+  </style>
+</head>
+<body>
+  <div id="protected-content">
+    <h1></h1>
+    <p></p>
+  </div>
+  <script>
+    const correctPassword = "n7ebbk";
+    // Check if the user is authenticated
+    if (sessionStorage.getItem("authenticated") === correctPassword) {
+      document.getElementById("protected-content").style.display = "block";
+
+      // Automatically trigger the download
+      const link = document.createElement('a');
+      link.href = 'images/2.jpg'; // Path to the file
+      link.download = 'images/2.jpg'; // Suggested filename for the download
+      document.body.appendChild(link); // Append link to the body
+      link.click(); // Trigger the download
+      document.body.removeChild(link); // Remove the link after download
+    } else {
+      window.location.href = "index.html"; // Redirect if not authenticated
+    }
+  </script>
+</body>
+</html>

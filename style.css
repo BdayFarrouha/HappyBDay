@@ -1,0 +1,64 @@
+#crossword-grid {
+    display: grid;
+    gap: 2px;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  .crossword-cell {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 1.2em;
+    border: 1px solid #000;
+  }
+  
+  .disabled-cell {
+    background-color: #d3d3d3;
+  }
+  
+  .intersection {
+    background-color: lightblue;
+  }
+  
+  button {
+    margin-top: 15px;
+  }
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  #game-container {
+    text-align: center;
+  }
+  
+  #puzzle-container {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 2px;
+    margin-top: 20px;
+    margin-left: 120px;
+    text-align: center;
+  }
+  
+  .puzzle-piece {
+    width: 100px;
+    height: 100px;
+    background-size: 300px 300px;
+    border: 1px solid #333;
+    cursor: pointer;
+  }
+  
+  button {
+    margin-top: 15px;
+    padding: 8px 16px;
+    cursor: pointer;
+  }
+  

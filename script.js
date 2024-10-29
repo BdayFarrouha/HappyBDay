@@ -160,10 +160,10 @@ document.getElementById('crossword-check-button').addEventListener('click', () =
 // Check the secret word input
 secretWordButton.addEventListener('click', () => {
     const secretWord = secretWordInput.value.toLowerCase();
-    if (secretWord === "n7ebbk") { 
+    if (secretWord === "n7ebbek") { 
       crosswordMessage.textContent = 'Happy birthday ey wazza ! Nshllh kol aam w nti haya b 1000 5ir ! ';
       // Store the authenticated state
-      sessionStorage.setItem("authenticated", "n7ebbk");
+      sessionStorage.setItem("authenticated", "n7ebbek");
       // Redirect to the secret page
       setTimeout(() => {
         window.location.href = "ki_tatla3_ll_sme_le_taarfha_l_page.html";
